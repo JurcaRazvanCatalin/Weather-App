@@ -9,7 +9,8 @@ const wrapper = document.querySelector('.wrapper'),
   cloudy = document.getElementById('wc'),
   snowy = document.getElementById('snow'),
   variab = document.getElementById('wcs'),
-  rainny = document.getElementById('wr');
+  rainny = document.getElementById('wr'),
+  arrowBack = wrapper.querySelector('header i');
 
 let api;
 
@@ -119,3 +120,7 @@ function weatherDetails(info) {
     console.log(info);
   }
 }
+
+arrowBack.addEventListener('click', () => {
+  wrapper.classList.remove('active');
+});
